@@ -21,8 +21,5 @@ RUN apt-get update -qq && apt-get install -yq -qq --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
- # set up git config:
-COPY git_config.sh /etc/cont-init.d/gitconfig
-
 # add required python packages:
 RUN pip install git+https://github.com/tomwallis/PsyUtils
